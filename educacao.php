@@ -32,7 +32,7 @@
                             <h5 class="card-title">Tipos de Juros</h5>
                             <p class="card-text">Aprenda a diferença entre juros simples e compostos e como eles
                                 impactam seu dinheiro.</p>
-                            <a href="#" class="btn btn-primary btn-sm">Ler mais</a>
+                            <a href="https://www.serasa.com.br/credito/blog/7-tipos-de-juros-para-voce-conhecer/" target='_blank' class="btn btn-primary btn-sm">Ler mais</a>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                             <h5 class="card-title">Reduzindo Dívidas</h5>
                             <p class="card-text">Estratégias práticas para quitar dívidas mais rápido e economizar
                                 juros.</p>
-                            <a href="#" class="btn btn-primary btn-sm">Ler mais</a>
+                            <a href="https://www.creditas.com/exponencial/como-sair-das-dividas/" target='_blank' class="btn btn-primary btn-sm">Ler mais</a>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                             <h5 class="card-title">Investimentos Rentáveis</h5>
                             <p class="card-text">Como escolher investimentos seguros e rentáveis, de acordo com seu
                                 perfil.</p>
-                            <a href="#" class="btn btn-primary btn-sm">Ler mais</a>
+                            <a href="https://www.sicredi.com.br/site/blog/investimentos/investimentos-mais-rentaveis-quando-arriscar-mais-na-hora-de-investir/" target='_blank' class="btn btn-primary btn-sm">Ler mais</a>
                         </div>
                     </div>
                 </div>

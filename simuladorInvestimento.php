@@ -71,11 +71,11 @@
       </div>
     </div>
 
-    <!-- Gráfico opcional -->
+    <!-- Gráfico -->
     <div class="mt-5 text-center">
       <h5>Evolução do Investimento</h5>
       <div class="d-flex justify-content-center">
-        <div style="width:100%; max-width:400px;">
+        <div style="width:100%; max-width:600px;">
           <canvas id="graficoInvestimento"></canvas>
         </div>
       </div>
@@ -100,7 +100,30 @@
     prazoSlider.addEventListener('input', () => prazoLabel.textContent = prazoSlider.value + ' anos');
     jurosSlider.addEventListener('input', () => jurosLabel.textContent = jurosSlider.value + '%');
 
-    // Simulação simples de juros compostos
+    // Config inicial do gráfico
+    const ctx = document.getElementById('graficoInvestimento');
+    let grafico = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [{
+          label: 'Montante acumulado',
+          data: [],
+          borderColor: '#198754',
+          backgroundColor: 'rgba(25, 135, 84, 0.2)',
+          fill: true,
+          tension: 0.3
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+
+    // Simulação de juros compostos
     const btnSimularInvest = document.getElementById('btnSimularInvest');
     btnSimularInvest.addEventListener('click', () => {
       const valor = parseFloat(document.getElementById('valorInvestido').value);
@@ -113,32 +136,18 @@
       document.getElementById('montanteFinal').textContent = 'R$ ' + montante.toFixed(2);
       document.getElementById('jurosAcumulado').textContent = 'R$ ' + juros.toFixed(2);
 
-      // Gráfico
-      const ctx = document.getElementById('graficoInvestimento');
-      new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: Array.from({length: anos + 1}, (_, i) => i + 'º ano'),
-          datasets: [{
-            label: 'Montante acumulado',
-            data: Array.from({length: anos + 1}, (_, i) => valor * Math.pow(1 + taxa, i)),
-            borderColor: '#198754',
-            backgroundColor: 'rgba(25, 135, 84, 0.2)',
-            fill: true,
-            tension: 0.3
-          }]
-        },
-        options: {
-          responsive: true,
-          scales: {
-            y: { beginAtZero: true }
-          }
-        }
-      });
+      // Prepara dados ano a ano
+      const labels = Array.from({length: anos + 1}, (_, i) => i + 'º ano');
+      const data = Array.from({length: anos + 1}, (_, i) => valor * Math.pow(1 + taxa, i));
+
+      // Atualiza gráfico
+      grafico.data.labels = labels;
+      grafico.data.datasets[0].data = data;
+      grafico.update();
     });
   </script>
 
   <!-- Script para dark mode -->
-    <script src="./darkmode.js"></script>
+  <script src="./darkmode.js"></script>
 </body>
 </html>
