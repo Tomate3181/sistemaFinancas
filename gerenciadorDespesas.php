@@ -28,7 +28,7 @@
         <div class="card mb-4 shadow-sm">
             <div class="card-body">
                 <h5 class="card-title">Adicionar Nova Despesa</h5>
-                <form method="POST" action="../app/controllers/DespesaController.php">
+                <form method="POST" action="./cadastrarDespesas.php">
                     <div class="row g-3">
                         <div class="col-md-4">
                             <label class="form-label">Descrição</label>
@@ -98,28 +98,43 @@
                             <th>Ações</th>
                         </tr>
                     </thead>
+
+                    <?php
+                        include_once "./conexao.php";
+                        $result = $conn->query("SELECT * FROM despesas ORDER BY data DESC");
+                    ?>
+
                     <tbody>
+                        <?php while ($row = $result->fetch_assoc()): ?>
                         <tr>
-                            <td>Aluguel</td>
-                            <td>Moradia</td>
-                            <td>1.000,00</td>
-                            <td>2025-09-01</td>
                             <td>
-                                <a href="#" class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></a>
-                                <a href="#" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                                <?= htmlspecialchars($row['descricao']) ?>
+                            </td>
+                            <td>
+                                <?= htmlspecialchars($row['categoria']) ?>
+                            </td>
+                            <td>
+                                <?= number_format($row['valor'], 2, ',', '.') ?>
+                            </td>
+                            <td>
+                                <?= $row['data'] ?>
+                            </td>
+                            <td>
+                                <a href="editarDespesa.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning">
+                                <i class="bi bi-pencil"></i>
+                                </a>
+
+                                <a href="./cadastrarDespesas.php?delete=<?= $row['id'] ?>" 
+                                    class="btn btn-sm btn-danger"
+                                    onclick="return confirm('Tem certeza que deseja excluir esta despesa?')">
+                                <i class="bi bi-trash"></i>
+                                </a>
+
                             </td>
                         </tr>
-                        <tr>
-                            <td>Mercado</td>
-                            <td>Alimentação</td>
-                            <td>250,00</td>
-                            <td>2025-09-05</td>
-                            <td>
-                                <a href="#" class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></a>
-                                <a href="#" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
-                            </td>
-                        </tr>
+                        <?php endwhile; ?>
                     </tbody>
+
                 </table>
             </div>
         </div>
@@ -161,7 +176,7 @@
         </script>
 
         <!-- Script para dark mode -->
-    <script src="./darkmode.js"></script>
+        <script src="./darkmode.js"></script>
 </body>
 
 </html>
