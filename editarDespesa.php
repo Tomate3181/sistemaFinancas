@@ -2,7 +2,7 @@
 include_once "./conexao.php";
 
 if (!isset($_GET['id'])) {
-    header("Location: gerenciadorDespesas.php");
+    header("Location: ./gerenciadorDespesas.php");
     exit();
 }
 
@@ -21,7 +21,7 @@ $despesa = $result->fetch_assoc();
 <body class="p-4">
     <div class="container">
         <h2>Editar Despesa</h2>
-        <form method="POST" action="./cadastrarDespesas.php">
+        <form method="POST" action="./editarDespesaBanco.php">
             <input type="hidden" name="id" value="<?= $despesa['id'] ?>">
 
             <div class="mb-3">
@@ -56,7 +56,7 @@ $despesa = $result->fetch_assoc();
             </div>
 
             <button type="submit" name="update" class="btn btn-primary">Salvar Alterações</button>
-            <a href="gerenciadorDespesas.php" class="btn btn-secondary">Cancelar</a>
+            <a href="./gerenciadorDespesas.php" class="btn btn-secondary">Cancelar</a>
         </form>
     </div>
 </body>
