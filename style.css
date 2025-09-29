@@ -1,0 +1,70 @@
+/* Geral */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 70px; /* compensar navbar fixa */
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #0d6efd, #198754);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+.hero h1 {
+  font-weight: bold;
+}
+
+/* Cards */
+.card {
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+footer {
+  padding: 20px 0;
+  margin-top: 50px;
+  text-align: center;
+  color: #6c757d;
+}
+
+/* LIGHT MODE */
+body.light-mode {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+body.light-mode .quote-section {
+  background-color: #f8f9fa;
+}
+
+/* DARK MODE */
+body.dark-mode {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+body.dark-mode .card {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+  color: #eaeaea;
+}
+body.dark-mode .text-muted {
+  color: #b0b0b0 !important;
+}
+body.dark-mode .quote-section {
+  background-color: #1a1a1a;
+}
+body.dark-mode footer {
+  background-color: #1f1f1f;
+  color: #aaa;
+}
+
+#graficoDespesas {
+  max-width: 100%;
+  height: auto;
+}
