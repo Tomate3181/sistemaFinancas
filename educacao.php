@@ -65,13 +65,13 @@
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Vídeo sobre Juros"
+                        <iframe src="https://www.youtube.com/watch?v=WFN5dxBTMgA" title="Vídeo sobre Juros"
                             allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Vídeo sobre Dívidas"
+                        <iframe src="https://www.youtube.com/watch?v=KuRZucr-YLE" title="Vídeo sobre Dívidas"
                             allowfullscreen></iframe>
                     </div>
                 </div>
