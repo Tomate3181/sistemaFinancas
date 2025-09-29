@@ -65,14 +65,12 @@
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/watch?v=WFN5dxBTMgA" title="Vídeo sobre Juros"
-                            allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WFN5dxBTMgA?si=vapveoX-koIg7klF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/watch?v=KuRZucr-YLE" title="Vídeo sobre Dívidas"
-                            allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8zj0GJKTWwE?si=_M4yEbY7ip3C5x4_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
